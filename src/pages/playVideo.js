@@ -38,7 +38,7 @@ export default function PlayVideo() {
           <Skeleton variant="rectangular" height={300} width={500} />
         )}
         {videoUrl && (
-          <video autoPlay controls width="500" height="300">
+          <video autoPlay controls width="90%" height="90%">
             <source src={videoUrl} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

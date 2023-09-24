@@ -30,19 +30,23 @@ export default function CollcOfThumbnail() {
             <Box>
               <Grid container spacing={2}>
                 {thumbnail.map((thumbnail) => (
-                  <Grid item key={thumbnail._id} sm={12} md={3} lg={3}>
+                  <Grid item key={thumbnail._id} xs={12} sm={6} md={3} lg={3}>
                     <Paper
                       onClick={() => navigate(`/${thumbnail._id}`)}
-                      sx={{ background: "black", cursor: "pointer" }}
+                      sx={{
+                        background: "black",
+                        cursor: "pointer",
+                        height: "380px",
+                      }}
                     >
                       <img
                         src={thumbnail.thumbnailUrl}
                         alt=""
                         width={"100%"}
                         style={{
-                          objectFit: "contain",
+                          objectFit: "fill",
                           maxHeight: "200px",
-                          background: "white",
+                          background: "#f8f8f8",
                         }}
                       />
                       <Typography
@@ -72,18 +76,23 @@ export default function CollcOfThumbnail() {
           )}
           {!thumbnail && (
             <Grid container spacing={2}>
-              <Grid item sm={12} md={3} lg={3}>
-                <Skeleton variant="rectangular" height={200} />
+              <Grid item xs={12} sm={6} md={3} lg={3}>
+                <Skeleton variant="rectangular" width="100%" height={200} />
                 <Skeleton height={40} />
                 <Skeleton height={60} />
               </Grid>
-              <Grid item sm={12} md={3} lg={3}>
-                <Skeleton variant="rectangular" height={200} />
+              <Grid item sm={6} xs={12} md={3} lg={3}>
+                <Skeleton variant="rectangular" width="100%" height={200} />
                 <Skeleton height={40} />
                 <Skeleton height={60} />
               </Grid>
-              <Grid item sm={12} md={3} lg={3}>
-                <Skeleton variant="rectangular" height={200} />
+              <Grid item sm={6} xs={12} md={3} lg={3}>
+                <Skeleton variant="rectangular" width="100%" height={200} />
+                <Skeleton height={40} />
+                <Skeleton height={60} />
+              </Grid>
+              <Grid item sm={6} xs={12} md={3} lg={3}>
+                <Skeleton variant="rectangular" width="100%" height={200} />
                 <Skeleton height={40} />
                 <Skeleton height={60} />
               </Grid>
